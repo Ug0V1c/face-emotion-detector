@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# Flask
+instance/
+.webassets-cache
+
+# Database & Model (too big for GitHub)
+database.db
+face_emotionModel.h5
+class_indices.json
+
+# Uploaded images
+uploads/
+
+# Dataset
+fer2013/
+fer2013.zip
+
+# Colab files
+.ipynb_checkpoints

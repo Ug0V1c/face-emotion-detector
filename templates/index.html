@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emotion Detector</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
+    input, button { margin: 10px 0; padding: 10px; width: 100%; }
+    button { background: #007bff; color: white; border: none; cursor: pointer; }
+    button:hover { background: #0056b3; }
+    .result { margin-top: 20px; font-weight: bold; color: #d63384; }
+  </style>
+</head>
+<body>
+  <h1>Student Emotion Detector</h1>
+  <form method="POST" enctype="multipart/form-data">
+    <label>Name:</label>
+    <input type="text" name="name" required />
+
+    <label>Student ID:</label>
+    <input type="text" name="student_id" required />
+
+    <label>Upload Your Photo:</label>
+    <input type="file" name="photo" accept="image/*" required />
+
+    <button type="submit">Submit & Detect Emotion</button>
+  </form>
+
+  {% if result %}
+  <div class="result">
+    <p><strong>{{ result }}</strong></p>
+    {% if image_path %}
+    <img src="{{ image_path }}" alt="Uploaded" style="max-width: 300px; margin-top: 10px;" />
+    {% endif %}
+  </div>
+  {% endif %}
+</body>
+</html>
